@@ -1,0 +1,106 @@
+:root {
+  --grey: #A5A5A5;
+  --black: #323232;
+  --orange: #FE9F06;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-left: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #000;
+  display: grid;
+  width: 100%;
+  height: 90vh;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% repeat(5, 14.5%);
+  grid-template-areas:
+    "screen screen screen screen"
+    "reset plusminus prct div"
+    "7 8 9 times"
+    "4 5 6 minus"
+    "1 2 3 plus"
+    "zero zero dot equal";
+}
+
+h3 {
+  color: #F1F1F1;
+  text-align: right;
+  margin: 7px 10px 0 0;
+  font-size: 10rem;
+  grid-area: screen;
+}
+
+.btn:not(#zero) {
+  user-select: none;
+  font-size: 3.5rem;
+  color: white;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.btn:hover {
+  user-select: none;
+  background: rgb(5, 190, 190);
+}
+
+.btn.number {
+  background: var(--black);
+}
+.btn.function {
+  background: var(--grey);
+  color: black !important;
+}
+.btn.calc {
+  background: var(--orange);
+}
+
+.btn.zero {
+  background: var(--black);
+}
+
+#zero {
+  user-select: none;
+  font-size: 3.5rem;
+  color: white;
+  margin: 10px 5px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 100px;
+  grid-area: zero;
+}
+
+#plusminus {
+  grid-area: plusminus;
+}
+
+#equal {
+  grid-area: equal;
+}
+#clear {
+  grid-area: reset;
+}
+
+#prct {
+  grid-area: prct;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#times {
+  grid-area: times;
+}
