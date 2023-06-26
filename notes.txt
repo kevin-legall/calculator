@@ -1,0 +1,25 @@
+Entrée d'un calcul
+/\
+appui egal
+/\
+verif entrées utilisateurs
+/\
+calcule 
+/\
+traite calcul pour affichage
+/\
+ajoute calcul + résultat sur le dom
+/\
+ajoute calcul + résultat en cache
+/\
+appui reset
+/\
+traite calcul pour affichage
+/\
+affiche calcul + résultat sur le dom dans l'historique
+/\
+appui sur calcul ou résultat
+/\
+traite calcul pour affichage
+/\
+affichage sur l'écran de calcul

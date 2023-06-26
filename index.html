@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar" content="black" />
+    <meta name="theme-color" content="white" />
+    <link rel="apple-touch-icon" href="./img/icon.png" />
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./calc.css" />
+    <link rel="stylesheet" href="./screen.css" />
+    <link rel="stylesheet" href="./settings.css" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Calculatrice App</title>
+  </head>
+
+  <body class="light-mode">
+    <nav>
+      <ul class="nav-ul">
+        <li><a class="checked" id="calcMobile">Calculatrice</a></li>
+        <li><a class="" id="histMobile">Historique</a></li>
+        <li><a class="" id="convMobile">Convertisseur</a></li>
+      </ul>
+      <div class="nav-line">
+        <div class="colored-line"></div>
+      </div>
+    </nav>
+    <main>
+      <section id="screenContainer" class="screen-container">
+        <ul id="history">
+          <li><h5 class="history-element" id="calc6"></h5></li>
+          <li><h5 class="history-element" id="res6"></h5></li>
+          <div class="right-line"></div>
+          <li><h5 class="history-element" id="calc5"></h5></li>
+          <li><h5 class="history-element" id="res5"></h5></li>
+          <div class="right-line"></div>
+          <li><h5 class="history-element" id="calc4"></h5></li>
+          <li><h5 class="history-element" id="res4"></h5></li>
+          <div class="right-line"></div>
+          <li><h5 class="history-element" id="calc3"></h5></li>
+          <li><h5 class="history-element" id="res3"></h5></li>
+          <div class="right-line"></div>
+          <li><h5 class="history-element" id="calc2"></h5></li>
+          <li><h5 class="history-element" id="res2"></h5></li>
+          <div class="right-line"></div>
+          <li><h5 class="history-element" id="calc1"></h5></li>
+          <li><h5 class="history-element" id="res1"></h5></li>
+        </ul>
+        <h5 id="calcul"></h5>
+        <h3 id="result"></h3>
+      </section>
+      <section id="calcContainer" class="calc-container">
+        <button class="function" id="clear">C</button>
+        <button class="function" id="hist">hist</button>
+        <button class="function" id="conv">conv</button>
+        <button class="function" id="sales">sales</button>
+        <button class="function" id="pi">𝝿</button>
+        <button class="function" id="xy">𝑥ʸ</button>
+        <button class="function" id="rand">Rand</button>
+        <button id="mode" class="function switch-mode">
+          <div class="power-switch">
+            <input id="switch" type="checkbox" checked />
+            <div class="button">
+              <svg class="power-off">
+                <use xlink:href="#line" class="line" />
+                <use xlink:href="#circle" class="circle" />
+              </svg>
+              <svg class="power-on">
+                <use xlink:href="#line" class="line" />
+                <use xlink:href="#circle" class="circle" />
+              </svg>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+            <symbol
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 150 150"
+              id="line"
+            >
+              <line x1="75" y1="34" x2="75" y2="58" />
+            </symbol>
+            <symbol
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 150 150"
+              id="circle"
+            >
+              <circle cx="75" cy="80" r="35" />
+            </symbol>
+          </svg>
+        </button>
+        <button class="function" id="prct">%</button>
+        <button class="function operator" id="div">÷</button>
+        <button class="button number seven" id="7">7</button>
+        <button class="button number eight" id="8">8</button>
+        <button class="button number nine" id="9">9</button>
+        <button class="function operator" id="times">x</button>
+        <button class="button number four" id="4">4</button>
+        <button class="button number five" id="5">5</button>
+        <button class="button number six" id="6">6</button>
+        <button class="function operator" id="minus">-</button>
+        <button class="button number one" id="1">1</button>
+        <button class="button number two" id="2">2</button>
+        <button class="button number three" id="3">3</button>
+        <button class="function operator" id="plus">+</button>
+        <button class="number" id="zero">0</button>
+        <button class="number dot" id=".">,</button>
+        <button class="function" id="paro">(</button>
+        <button class="function" id="parc">)</button>
+        <button class="number" id="del">⌫</button>
+        <button class="btn" id="equal">=</button>
+        <div id="hidden"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script>
+  </body>
+</html>

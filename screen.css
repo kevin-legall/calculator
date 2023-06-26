@@ -1,0 +1,49 @@
+.screen-container {
+  display: grid;
+  width: 100%;
+  height: 75vh;
+  max-height: 40vh;
+  transition: all 300ms ease-in-out;
+  grid-area: screen-container;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 50% 20% 30%;
+  grid-template-areas:
+    "history history"
+    "hist hist"
+    "res res";
+}
+
+#history {
+  opacity: 0.5;
+  font-size: 40px;
+  padding-top: 40px;
+  grid-area: history;
+  background: var(--black);
+  scrollbar-width: none;
+  user-select: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: 1s background-color ease-in-out;
+}
+
+#history::-webkit-scrollbar {
+  display: none;
+}
+
+.screen-container.showed {
+  position: relative;
+  z-index: 100;
+  animation-fill-mode: forwards;
+  grid-template-rows: 70% 10% 20%;
+  max-height: 75vh;
+  opacity: 1;
+}
+
+.calc-container.showed {
+  z-index: 1;
+  transform: translateY(350px);
+}
+
+#calcul {
+  user-select: none;
+}
