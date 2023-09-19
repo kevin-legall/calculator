@@ -134,13 +134,13 @@ function handleKey(e) {
       result.textContent.trim();
       if (result.textContent.length >= screenCapacity) {
         calcContent.innerHTML = "0";
-        result.textContent = "Ton père le chauve";
+        result.textContent = "Erreur 10001";
       } else if (lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "." || lastChar == "^") {
         result.textContent = "Fainéant";
       } else if (result.textContent.includes("(") && !result.textContent.includes(")")) {
-        result.textContent = "Salaup";
+        result.textContent = "Erreur 10002";
       } else if (!result.textContent.includes("+") && !result.textContent.includes("-") && !result.textContent.includes("*") && !result.textContent.includes("/") && !result.textContent.includes("^")) {
-        result.textContent = "Arrière mécréant !";
+        result.textContent = "Erreur 10003";
       } else {
         addElement();
       }
@@ -188,10 +188,10 @@ function addElement() {
   if (result.textContent !== "0") {
     // gestion des erreurs
     if (result.textContent == "Infinity") {
-      result.textContent = "Abruti";
+      result.textContent = "Erreur 10004";
       return;
     } else if (result.textContent == "NaN") {
-      result.textContent = "Idiot";
+      result.textContent = "Erreur 10005";
       return;
     } else if (result.textContent == "") {
       result.textContent = "0";
@@ -217,10 +217,10 @@ function addElement() {
     } else {
       // gestion des erreurs
       if (resultatElement == "Infinity") {
-        result.textContent = "Enculé";
+        result.textContent = "Erreur 10006";
         return;
       } else if (resultatElement == "NaN") {
-        result.textContent = "Petite merde";
+        result.textContent = "Erreur 10007";
         return;
         // Si il y a une virgule dans l'affichage du calcul, le résultat aura 2 chiffres après la virgule
       } else if (result.textContent.includes(".")) {
@@ -259,7 +259,7 @@ function addElement() {
     });
 
   } else {
-    result.textContent = "Va crever";
+    result.textContent = "Erreur 10008";
   }
 }
 
@@ -564,13 +564,13 @@ equal.addEventListener("click", () => {
   result.textContent.trim();
   if (result.textContent.length >= screenCapacity) {
     calcContent.innerHTML = "0";
-    result.textContent = "Ton père le chauve";
+    result.textContent = "Erreur 10009";
   } else if (lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "." || lastChar == "^") {
-    result.textContent = "Fainéant";
+    result.textContent = "Erreur 10010";
   } else if (result.textContent.includes("(") && !result.textContent.includes(")")) {
-    result.textContent = "Salaup";
+    result.textContent = "Erreur 10011";
   } else if (!result.textContent.includes("+") && !result.textContent.includes("-") && !result.textContent.includes("*") && !result.textContent.includes("/") && !result.textContent.includes("^")) {
-    result.textContent = "Arrière mécréant !";
+    result.textContent = "Erreur 10012";
   } else {
     addElement();
   }
